@@ -6,10 +6,10 @@ maven 'M2_HOME'
 }
 
     stages {
-        stage('CheckOut') {
+        stage('Checkout') {
             steps {
                echo 'checkout the sourcecode from guthub'
-                git branch: 'main', url: 'https://github.com/shivarajshooru/star-agile-insurance-project.git'
+               git branch: 'main', url: 'https://github.com/shivarajshooru/star-agile-insurance-project.git'
           
             }
 		}
