@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+tools {
+maven 'M2_HOME'
+}
+
+    stages {
+        stage('CheckOut') {
+            steps {
+               echo 'checkout the sourcecode from guthub'
+                git branch: 'main', url: 'https://github.com/shivarajshooru/star-agile-insurance-project.git'
+          
+            }
+		}
+        stage('package') {
+            steps {
+            echo 'create a package'
+            sh 'mvn clean package'
+            }
+		}
+  }
+  }
